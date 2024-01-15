@@ -8,7 +8,7 @@
                 <p>{{item.name}}</p>
                 <p>Price : {{item.price | currency : 'INR'}}</p>
                 <p>Quantity : <input type="number" value="item.quantity" [(ngModel)]="item.quantity" min="1"></p>
-                <p>Total : {{item.price * item.quantity | currency : 'INR'}}</p>
+                <p>Total : {{item.price | totalAmount : item.quantity | currency : 'INR'}}</p>
             </div>
     
         </div>

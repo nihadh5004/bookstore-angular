@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { bookDetailType } from 'src/app/assets/types/bookDetailType';
 import { lsTypeCart } from 'src/app/assets/types/lsTypeCart';
 import { BooksService } from 'src/app/services/booksapi/books.service';
 
@@ -10,7 +11,7 @@ import { BooksService } from 'src/app/services/booksapi/books.service';
 })
 export class BookDetailComponent implements OnInit {
 
-  bookDetail:any={}
+  bookDetail!:bookDetailType
 
   quantity:number = 1
 

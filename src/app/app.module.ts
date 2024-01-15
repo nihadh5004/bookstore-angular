@@ -12,6 +12,8 @@ import { BookcardsComponent } from './components/bookcards/bookcards.component';
 import { ButtonComponent } from './components/button/button.component';
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { CartComponent } from './components/cart/cart.component';
+import { TotalAmountPipe } from './pipes/total-amount.pipe';
+
 import { BooksService } from './services/booksapi/books.service';
 
 @NgModule({
@@ -22,7 +24,8 @@ import { BooksService } from './services/booksapi/books.service';
     BookcardsComponent,
     ButtonComponent,
     BookDetailComponent,
-    CartComponent
+    CartComponent,
+    TotalAmountPipe
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { BooksService } from './services/booksapi/books.service';
     HttpClientModule
   ],
   providers: [
+
     {provide:HTTP_INTERCEPTORS , useClass:ApiInterceptorInterceptor , multi:true},
     BooksService
   ],

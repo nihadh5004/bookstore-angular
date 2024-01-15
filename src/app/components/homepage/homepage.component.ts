@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { booksListType } from 'src/app/assets/types/booksListType';
 import { BooksService } from 'src/app/services/booksapi/books.service';
 
 @Component({
@@ -8,8 +9,7 @@ import { BooksService } from 'src/app/services/booksapi/books.service';
 })
 export class HomepageComponent implements OnInit {
 
-  books:any={
-  }
+  books!:booksListType
 
 constructor(private booksService:BooksService){}
 
