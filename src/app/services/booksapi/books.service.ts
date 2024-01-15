@@ -4,9 +4,7 @@ import { Observable } from 'rxjs';
 import { bookDetailType } from 'src/app/assets/types/bookDetailType';
 import { booksListType } from 'src/app/assets/types/booksListType';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BooksService {
 
   constructor(private http:HttpClient) { }
