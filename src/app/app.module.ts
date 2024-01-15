@@ -12,6 +12,7 @@ import { BookcardsComponent } from './components/bookcards/bookcards.component';
 import { ButtonComponent } from './components/button/button.component';
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { CartComponent } from './components/cart/cart.component';
+import { BooksService } from './services/booksapi/books.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CartComponent } from './components/cart/cart.component';
     HttpClientModule
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS , useClass:ApiInterceptorInterceptor , multi:true}
+    {provide:HTTP_INTERCEPTORS , useClass:ApiInterceptorInterceptor , multi:true},
+    BooksService
   ],
   bootstrap: [AppComponent]
 })
