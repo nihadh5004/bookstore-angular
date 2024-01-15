@@ -1,1 +1,24 @@
-<p>cart works!</p>
+<div class="d-flex justify-content-between">
+
+    <div class="p-3">
+        <div *ngFor="let item of cartItems" class="d-flex gap-5 mt-3">
+            <img src="{{item.imageLink}}" alt="">
+            <div>
+    
+                <p>{{item.name}}</p>
+                <p>Price : {{item.price | currency : 'INR'}}</p>
+                <p>Quantity : <input type="number" value="item.quantity" [(ngModel)]="item.quantity" min="1"></p>
+                <p>Total : {{item.price * item.quantity | currency : 'INR'}}</p>
+            </div>
+    
+        </div>
+    </div>
+    <div>
+        <div class="border p-5 m-5">
+            <p>Total amount: 3445 </p>
+            <p>Total amount:435443 </p>
+            <p>Total amount: 53434</p>
+            <app-button classText="mt-3 btn btn-success w-100" text="Proceed to Checkout"></app-button>
+        </div>
+    </div>
+</div>

@@ -13,5 +13,8 @@ export class NavbarComponent {
   routeToCart(){
       this.router.navigate(['cart'])
   }
+  routeToHome(){
+      this.router.navigate([''])
+  }
 
 }

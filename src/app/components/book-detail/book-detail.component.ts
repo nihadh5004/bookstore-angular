@@ -70,6 +70,7 @@ export class BookDetailComponent implements OnInit {
     localStorage.setItem('carts', JSON.stringify(cart));
   
     console.log('Cart updated:', cart);
+    alert('item added to cart')
   }
   
 }
